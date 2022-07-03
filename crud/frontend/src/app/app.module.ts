@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -21,6 +22,7 @@ import { ForDirective } from './directives/for.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,15 +36,20 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ProductCreateComponent
   ],
   imports: [
+    // Brouser
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    // Router
+    AppRoutingModule,
+    // Material
     MatToolbarModule,
     MatListModule,
     MatSidenavModule,
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
+    // HttpClient
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
