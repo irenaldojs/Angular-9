@@ -1,5 +1,5 @@
 // Base
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -38,7 +38,11 @@ import { ForDirective } from './directives/for.directive';
 import { FormsModule } from '@angular/forms';
 import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
 
+// Locales
+import localePt from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common';
 
+registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
@@ -77,7 +81,10 @@ import { ProductRead2Component } from './components/product/product-read2/produc
     // Forms
     FormsModule,
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt-BR'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
