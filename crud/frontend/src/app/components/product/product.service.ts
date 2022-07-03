@@ -25,7 +25,18 @@ export class ProductService {
   create(product: Product): Observable<Product> {
     return this._http.post<Product>(this._baseUrl, product)
   }
+
   read(): Observable<Product[]> {
     return this._http.get<Product[]>(this._baseUrl)
+  }
+
+  readById(id: string): Observable<Product>{3
+    const url = `${this._baseUrl}/${id}`
+    return this._http.get<Product>(url)
+  }
+
+  update(product: Product): Observable<Product>{
+    const url = `${this._baseUrl}/${product.id}`
+    return this._http.put<Product>(url, product)
   }
 }
