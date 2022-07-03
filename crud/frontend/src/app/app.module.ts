@@ -21,6 +21,7 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 // Brouser
 import { BrowserModule } from '@angular/platform-browser';
@@ -34,6 +35,7 @@ import { ForDirective } from './directives/for.directive';
 import { FormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,8 @@ import { FormsModule } from '@angular/forms';
     ProductCrudComponent,
     RedDirective,
     ForDirective,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent,
   ],
   imports: [
     // Brouser
