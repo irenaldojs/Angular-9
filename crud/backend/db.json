@@ -16,9 +16,19 @@
       "price": 5000.89
     },
     {
-      "name": "Lápis",
-      "price": "2.99",
-      "id": 4
+      "name": "Teclado Gamer",
+      "price": "299.00",
+      "id": 5
+    },
+    {
+      "name": "Monitor Gamer",
+      "price": "2499.00",
+      "id": 6
+    },
+    {
+      "name": "Televisão",
+      "price": "2999.00",
+      "id": 7
     }
   ]
 }
